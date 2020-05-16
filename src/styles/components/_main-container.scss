@@ -21,11 +21,54 @@
   }
   
   &__aside {
-    width: 30%;
+    width: 25%;
+    position: relative;
+    top: 90px;
     order: 1;
     margin-left: $margin-4;
-    // border: 1px solid green;
+    background-color: $color-gray;
+    height: 80vh;
+    text-align: center;
+
+    &--btn {
+      @include gradient;
+      border: none;
+      padding: .8rem;
+      width: 80%;
+      position: absolute;
+      top: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      
+
+    }
+  }
+}
 
 
+.divider {
+  @include hr-gradient;
+  border: none;
+  height: 2px;
+  margin-bottom: 2rem;
+}
+
+
+@include media(phablet) {
+  .main {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 1rem;
+    
+    &__article {
+    
+    }
+
+    &__aside {
+
+    }
   }
 }

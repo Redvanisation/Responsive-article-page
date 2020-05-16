@@ -7,24 +7,16 @@ body {
   margin: 1rem auto;
   text-align: left;
   font-size: 1.6rem;
-  // font-size: 3rem;
 }
 
 .title {
   font-weight: bold;
   font-size: 1.2rem;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   text-align: left;
-
-}
-
-.divider {
-
 }
 
 .main {
-  // font-size: 1.5rem;
-
   &__article {
     text-align: center;
 
@@ -32,6 +24,34 @@ body {
       text-align: left;
       font-weight: 300;
       line-height: 1.5;
+    }
+  }
+
+  &__aside {
+
+    &--btn {
+      text-transform: capitalize;
+      color: $color-white;
+      font-size: 1rem;
+
+    }
+  }
+}
+
+@include media(tab-port) {
+  .big-title {
+    font-size: 1.4rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .main {   
+    &__aside {
+      &--btn {
+        font-size: .8rem;
+      }
     }
   }
 }

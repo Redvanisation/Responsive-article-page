@@ -1,11 +1,18 @@
 @mixin gradient {
   background: linear-gradient(90deg, $first-color 0.83%, $second-color 100%);
-  // background: linear-gradient(90deg, #AC519C 0.83%, #E5424F 100%);
+}
+
+@mixin hr-gradient {
+  background: linear-gradient(90deg, $hr-first-color 0.83%, $hr-second-color 100%);
+}
+
+@mixin inactive-btn-gradient {
+  background: linear-gradient(90deg, $inactive-first-color 1.29%, $inactive-second-color 100%);
 }
 
 // MEDIA QUERIES:
 
-@mixin respond($breakpoint) {
+@mixin media($breakpoint) {
 
   @if $breakpoint == phone {
       @media only screen and (max-width: 37.5em) { @content }; // 600px
