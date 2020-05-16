@@ -29,20 +29,20 @@
     height: 80%;
     text-align: center;
 
-    &--btn {
-      @include gradient;
-      border: none;
-      padding: .8rem;
-      width: 80%;
-      position: absolute;
-      top: 4rem;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: pointer;
-    }
   }
 }
 
+.btn {
+  @include gradient;
+  border: none;
+  padding: .8rem;
+  width: 80%;
+  position: relative;
+  top: 4rem;
+  // left: 50%;
+  // transform: translateX(-50%);
+  cursor: pointer;
+}
 
 .divider {
   @include hr-gradient;
@@ -65,11 +65,11 @@
       margin: -4rem 0 2rem 0;
       width: 60%;
       height: 50%;
-
-      &--btn {
-        top: 2rem;
-      }
     }
+  }
+  
+  .btn {
+    top: 2rem;
   }
 }
 
@@ -85,10 +85,10 @@
     &__aside {
       width: 90%;
       height: 50%;
-
-      &--btn {
-        top: 2rem;
-      }
     }
+  }
+
+  .btn {
+    top: 2rem;
   }
 }

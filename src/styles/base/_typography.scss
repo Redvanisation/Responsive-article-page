@@ -27,16 +27,63 @@ body {
     }
   }
 
-  &__aside {
+  // &__aside {
 
-    &--btn {
-      text-transform: capitalize;
-      color: $color-white;
-      font-size: 1rem;
+  // }
+}
+
+.btn {
+  text-transform: capitalize;
+  color: $color-white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#262626, .8);
+
+  &__box {
+    color: $color-text-popup;
+    font-weight: 300;
+
+    &--close-btn {
       font-weight: bold;
+      font-size: 2rem;
+    }
+
+    &--step {
+      color: $color-gray-dark;
+      font-size: .9rem;
+    }
+
+    &--progress-bar {
+    }
+
+    &--text {
+      
+    }
+
+    &--input-label {
+      font-size: .8rem;
+    }
+
+    &--input {
+      font-size: 1rem;
+      font-weight: 300;
+
+      &:-ms-input-placeholder {
+        color: #828282;
+      }
     }
   }
 }
+
+
 
 @include media(tab-port) {
   .big-title {
@@ -46,20 +93,41 @@ body {
   .title {
     font-size: 1.2rem;
   }
+  
+  .btn {
+    font-size: .8rem;
+  }
+}
 
-  .main {   
-    &__aside {
-      &--btn {
-        font-size: .8rem;
+@include media(phablet) {
+  .modal {
+    &__box {
+      &--text {
+        text-align: left;
+        font-size: 1.3rem;
       }
     }
   }
 }
 
 @include media(phone) {
-  .main {   
-    &__aside {
-      &--btn {
+  .btn {
+    font-size: 1.2rem;
+  }
+
+  .modal {
+    &__box {
+      &--text {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@include media(phone-sm) {
+  .modal {
+    &__box {
+      &--text {
         font-size: 1.2rem;
       }
     }

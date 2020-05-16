@@ -8,3 +8,23 @@
     margin-right: 1rem;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.text-green {
+  color: #027A04;
+}
+
+.wrong-input {
+  & * {
+    color: $color-red;
+  }
+
+  &__border {
+    &:focus {
+      border: 1px solid $color-red !important;
+    }
+  }
+}

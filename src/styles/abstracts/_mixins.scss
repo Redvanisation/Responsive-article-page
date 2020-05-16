@@ -6,13 +6,29 @@
   background: linear-gradient(90deg, $hr-first-color 0.83%, $hr-second-color 100%);
 }
 
-@mixin inactive-btn-gradient {
+@mixin pg-gradient {
+  background: linear-gradient(90deg, $hr-second-color 0.83%, $hr-first-color 100%);
+}
+
+@mixin hover-btn-gradient {
   background: linear-gradient(90deg, $inactive-first-color 1.29%, $inactive-second-color 100%);
+}
+
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // MEDIA QUERIES:
 
 @mixin media($breakpoint) {
+
+  @if $breakpoint == phone-sm {
+      @media only screen and (max-width: 21.875em) { @content }; // 350px
+  }
 
   @if $breakpoint == phone {
       @media only screen and (max-width: 37.5em) { @content }; // 600px
