@@ -1,0 +1,30 @@
+@mixin gradient {
+  background: linear-gradient(90deg, $first-color 0.83%, $second-color 100%);
+  // background: linear-gradient(90deg, #AC519C 0.83%, #E5424F 100%);
+}
+
+// MEDIA QUERIES:
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) { @content }; // 600px
+  }
+
+  @if $breakpoint == phablet {
+      @media only screen and (max-width: 46.875em) { @content }; // 750px
+  }
+
+  @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) { @content }; // 900px
+  }
+
+  @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) { @content }; // 1200px
+  }
+
+  @if $breakpoint == big-desk {
+    @media only screen and (min-width: 112.5em) { @content }; // 1800px
+  }
+
+}

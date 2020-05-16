@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1rem;
+  
+  &__article {
+    width: 50%;
+    order: 0;
+    
+
+    &--text {
+      margin: 1rem auto;
+    }
+    
+    &--img {
+      width: 100%;
+      margin: 1rem auto;
+    }
+  }
+  
+  &__aside {
+    width: 30%;
+    order: 1;
+    margin-left: $margin-4;
+    // border: 1px solid green;
+
+
+  }
+}
