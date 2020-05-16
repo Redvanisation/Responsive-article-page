@@ -39,9 +39,31 @@
   width: 80%;
   position: relative;
   top: 4rem;
-  // left: 50%;
-  // transform: translateX(-50%);
+  outline: none;
   cursor: pointer;
+
+  &:before {
+    @include hover-btn-gradient;
+    position: absolute;
+    content: "Send Me The Tips";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .3s;
+    opacity: 0;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+  
+  &:active:before {
+    opacity: .5;
+  }
 }
 
 .divider {
