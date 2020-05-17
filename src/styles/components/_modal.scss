@@ -1,0 +1,118 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#262626, .8);
+  transition: all .2s;
+
+  &__box {
+    @include absCenter;
+    position: relative;
+    max-width: 570px;
+    background-color: white;
+    padding: 2rem 4rem;
+    text-align: center;
+
+    &--close-btn {
+      position: absolute;
+      top: 0;
+      right: 13px;
+      cursor: pointer;
+    }
+
+    &--step {
+      margin-bottom: .5rem;
+    }
+
+    &--progress-bar {
+      height: 2px;
+      background-color: #e5e5e5;
+
+      &--color {
+        @include pg-gradient;
+        width: 50%;
+        height: 2px;
+      }
+    }
+
+    &--text {
+      margin: 2rem auto;
+    }
+
+    &--input-div {
+      position: relative;
+    }
+
+    &--input-label {
+      position: absolute;
+      left: 1.1rem;
+      top: 5px;
+      opacity: 1;
+      z-index: 1;
+      transition: all .3s;
+    }
+
+    &--input {
+      width: 100%;
+      height: 3.5rem;
+      -webkit-appearance: none;
+      box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
+      border: 1px solid transparent;
+      border-radius: 0;
+      padding: 1.2rem 1rem .5rem;
+      outline: none;
+      transition: all .2s;
+      
+      &:placeholder-shown {
+        padding: .5rem 1rem;
+      }
+      
+      &:focus {
+        border: 1px solid #9E9E9E;
+      }
+
+      &:placeholder-shown + .modal__box--input-label {
+        top: 30px;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    & .btn {
+      top: 0;
+      margin: 1rem auto;
+      width: 100%;
+
+      &:before {
+        content: "Send Me The Tips »";
+      }
+    }
+  }
+}
+
+@include media(tab-land) {
+  .modal {
+    &__box {
+      width: 52%;
+    }
+  }
+}
+
+@include media(tab-port) {
+  .modal {
+    &__box {
+      width: 65%;
+    }
+  }
+}
+
+@include media(phone) {
+  .modal {
+    &__box {
+      width: 95%;
+      padding: 2rem 1rem;
+    }
+  }
+}

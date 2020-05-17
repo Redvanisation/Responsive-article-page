@@ -1,0 +1,144 @@
+// Page's typography
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $color-text-main;
+}
+
+.big-title {
+  font-weight: bold;
+  margin: 1rem auto;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin: 1.5rem auto;
+  text-align: left;
+}
+
+.main {
+  &__article {
+    text-align: center;
+
+    &--text {
+      text-align: left;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+}
+
+.btn {
+  text-transform: capitalize;
+  color: $color-white;
+  font-size: 0.938rem;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#262626, .8);
+
+  &__box {
+    color: $color-text-popup;
+    font-weight: 300;
+
+    &--close-btn {
+      font-weight: bold;
+      font-size: 2.375rem;
+    }
+
+    &--step {
+      color: $color-gray-dark;
+      font-size: .9rem;
+    }
+
+    &--text {
+      font-size: 1.5rem;
+    }
+
+    &--input-label {
+      font-size: .75rem;
+    }
+
+    &--input {
+      font-size: 1rem;
+      font-weight: 300;
+      
+      &:placeholder-shown {
+        font-size: 1.125rem;
+      }
+
+      &:-ms-input-placeholder {
+        color: #828282;
+      }
+    }
+
+    & .btn {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+
+
+@include media(tab-port) {
+  .big-title {
+    font-size: 1.4rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+@include media(phablet) {
+  .modal {
+    &__box {
+      &--text {
+        text-align: left;
+        font-size: 1.3rem;
+      }
+
+      &--input {
+        font-size: 1rem;
+
+        &:placeholder-shown {
+          font-size: 1.063rem;
+        }
+      }
+    }
+  }
+}
+
+@include media(phone) {
+  .big-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+  }
+}
+
+@include media(phone-sm) {
+  .modal {
+    &__box {
+      &--text {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

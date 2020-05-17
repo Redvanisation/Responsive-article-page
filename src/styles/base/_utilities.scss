@@ -1,0 +1,28 @@
+@include media(phone) {
+  .phone-p-sides-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .phone-m-sides-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.text-green {
+  color: #027A04;
+}
+
+.wrong-input {
+  color: $color-red;
+  
+
+  &__border {
+    border: 1px solid $color-red !important;
+  }
+}
