@@ -108,16 +108,6 @@
   }
 }
 
-// @include media(phablet) {
-//   .modal {
-//     &__box {
-//       &--text {
-//         // font-size: 1.3rem;
-//       }
-//     }
-//   }
-// }
-
 @include media(phone) {
   .modal {
     &__box {
