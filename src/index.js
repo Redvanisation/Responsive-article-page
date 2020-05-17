@@ -48,6 +48,13 @@ const validateEmail = () => {
   }
 }
 
+// Function that handles the submission when enter key is pressed
+const handleEnterKey = (e) => {
+  if (e.keyCode === 13) {
+    validateEmail();
+  }
+}
+
 // Function to revert the input field's styles on blur if there was nothing entered by the use 
 const handleInputBlur = () => {
   if (!input.value) {
@@ -58,4 +65,5 @@ const handleInputBlur = () => {
 // Event listeners
 modal.addEventListener('click', (e) => hideModal(e));
 btn.addEventListener('click', () => validateEmail());
+input.addEventListener('keydown', (e) => handleEnterKey(e));
 input.addEventListener('blur', () => handleInputBlur())
