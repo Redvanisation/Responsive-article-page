@@ -10,14 +10,14 @@
   &__box {
     @include absCenter;
     position: relative;
-    width: 40%;
+    max-width: 570px;
     background-color: white;
     padding: 2rem 4rem;
     text-align: center;
 
     &--close-btn {
       position: absolute;
-      top: 3px;
+      top: 0;
       right: 13px;
       cursor: pointer;
     }

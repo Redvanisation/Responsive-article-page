@@ -9,13 +9,14 @@
     width: 50%;
     order: 0;
 
+    &--part {
+      &:last-child {
+        margin-bottom: $margin-4;
+      }
+    }
     
     &--text {
       margin: 1rem auto;
-      
-      &:last-child {
-        margin-bottom: 4rem;
-      }
     }
     
     &--img {
@@ -86,9 +87,11 @@
     &__article {
       width: 80%;
 
-      &--text {
+      &--part {
+        margin-bottom: $margin-3;
+        
         &:last-child {
-          margin-bottom: 1rem;
+          margin-bottom: 0;
         }
       }
     }
