@@ -8,9 +8,14 @@
   &__article {
     width: 50%;
     order: 0;
+
     
     &--text {
       margin: 1rem auto;
+      
+      &:last-child {
+        margin-bottom: 4rem;
+      }
     }
     
     &--img {
@@ -28,7 +33,6 @@
     background-color: $color-gray;
     height: 80%;
     text-align: center;
-
   }
 }
 
@@ -81,6 +85,12 @@
     
     &__article {
       width: 80%;
+
+      &--text {
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+      }
     }
 
     &__aside {
