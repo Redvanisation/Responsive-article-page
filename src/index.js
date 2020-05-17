@@ -6,6 +6,7 @@ const modalBox = document.querySelector('#modal-box');
 const input = document.querySelector('#modal-input');
 const label = document.querySelector('#modal-box-label');
 const btn = document.querySelector('#modal-box-btn');
+const articleImage = document.querySelector('#article-img');
 
 const hideModal = (e) => {
   if (e.target === modal || e.target === modalCloseX) {

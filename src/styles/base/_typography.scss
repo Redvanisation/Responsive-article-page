@@ -27,10 +27,6 @@ body {
       line-height: 1.5;
     }
   }
-
-  // &__aside {
-
-  // }
 }
 
 .btn {
@@ -62,19 +58,12 @@ body {
       font-size: .9rem;
     }
 
-    &--progress-bar {
-    }
-
-    &--text {
-      
-    }
-
     &--input-label {
       font-size: .8rem;
     }
 
     &--input {
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 300;
 
       &:-ms-input-placeholder {
@@ -106,6 +95,10 @@ body {
       &--text {
         text-align: left;
         font-size: 1.3rem;
+      }
+
+      &--input {
+        font-size: 1rem;
       }
     }
   }
