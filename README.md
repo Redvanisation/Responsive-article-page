@@ -1,4 +1,4 @@
-# Responsive articles page
+# Responsive articles page:
 
 - Blog page made with **vanilla JavaScript**, **HTML5**, and **Sass**.
 - **HTML5**: Using sematic html tags and responsive images.
